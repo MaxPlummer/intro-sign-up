@@ -1,27 +1,36 @@
+:root {
+  /* CSS variables to hold color values */
+  --white-text: #fff;
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --neutral-gray: hsl(249, 10%, 26%);
+  --neutral-purple: hsl(246, 25%, 77%);
+}
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .flex {
-    display: flex;
+  display: flex;
 }
 .flex-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 body {
-    background-image: url(./images/bg-intro-mobile.png);
-    background-color: hsl(0, 100%, 74%);
-    font-family: "Poppins", sans-serif;
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: hsl(0, 100%, 74%);
+  font-family: "Poppins", sans-serif;
 }
 .attribution {
+  color: var(--white-text);
   font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--primary-green);
 }

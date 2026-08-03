@@ -29,18 +29,23 @@
       </header>
 
       <div>
-        <div class="trial-box primary-text box-shadow">
+        <div class="trial-box primary-text box-shadow-gray">
           <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
         </div>
 
-        <form name="registerForm" onsubmit="validate()" class="flex flex-col form-field box-shadow">
-          <input type="text" placeholder="First Name" name="fname" />
-          <input type="text" placeholder="Last Name" name="lname" />
-          <input type="email" placeholder="Email Address" name="email" />
-          <input type="password" placeholder="Password" name="password" />
-          <button type="submit">Claim your free trial</button>
+        <!-- Name form items for javascript onsubmit function -->
+        <form name="registerForm" onsubmit="validate()" class="flex flex-col form-field box-shadow-gray">
+          <input placeholder="First Name" name="fname" />
+          <span id="fname-alert"></span>
+          <input placeholder="Last Name" name="lname" />
+          <span id="lname-alert"></span>
+          <input placeholder="Email Address" name="email" />
+          <span id="email-alert"></span>
+          <input placeholder="Password" name="password" />
+          <span id="password-alert"></span>
+          <button type="submit" class="primary-text box-shadow-green">Claim your free trial</button>
           <p class="tos">
-            By clicking the button, you are agreeing to our Terms and Services
+            By clicking the button, you are agreeing to our <strong class="red-bold">Terms and Services</strong>
           </p>
         </form>
       </div>

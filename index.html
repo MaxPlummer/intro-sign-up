@@ -29,18 +29,46 @@
       </header>
 
       <div>
-        <div class="trial-box primary-text box-shadow">
-          <p>Try it free 7 days then $20/mo. thereafter</p>
+        <div class="trial-box primary-text box-shadow-gray">
+          <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
         </div>
 
-        <form class="flex flex-col form-field box-shadow">
-          <input placeholder="First Name" />
-          <input placeholder="Last Name" />
-          <input placeholder="Email Address" />
-          <input placeholder="Password" />
-          <button>Claim your free trial</button>
+        <!-- Name form items for javascript onsubmit function -->
+        <form
+          name="registerForm"
+          onsubmit="validate()"
+          novalidate
+          class="flex flex-col form-field box-shadow-gray"
+        >
+          <input
+            type="text"
+            placeholder="First Name"
+            name="fname"
+            autocomplete="on"
+          />
+          <span id="fname-alert"></span>
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="lname"
+            autocomplete="on"
+          />
+          <span id="lname-alert"></span>
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            autocomplete="on"
+          />
+          <span id="email-alert"></span>
+          <input type="password" placeholder="Password" name="password" />
+          <span id="password-alert"></span>
+          <button type="submit" class="primary-text box-shadow-green">
+            Claim your free trial
+          </button>
           <p class="tos">
-            By clicking the button, you are agreeing to our Terms and Services
+            By clicking the button, you are agreeing to our
+            <strong class="red-bold">Terms and Services</strong>
           </p>
         </form>
       </div>
@@ -54,4 +82,5 @@
       <a href="https://github.com/MaxPlummer" target="_blank">Max Plummer</a>.
     </footer>
   </body>
+  <script src="./validate.js"></script>
 </html>

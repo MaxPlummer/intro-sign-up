@@ -1,11 +1,12 @@
 :root {
   /* CSS variables to hold color values */
-  --white-text: #fff;
   --primary-red: hsl(0, 100%, 74%);
   --primary-green: hsl(154, 59%, 51%);
-	--accent-purple: hsl(248, 32%, 49%);
+  --accent-purple: hsl(248, 32%, 49%);
   --neutral-gray: hsl(249, 10%, 26%);
   --neutral-purple: hsl(246, 25%, 77%);
+  --shadow-gray: hsla(0, 0%, 0%, 0.15);
+  --shadow-green: hsl(154, 59%, 46%);
 }
 * {
   box-sizing: border-box;
@@ -20,50 +21,86 @@
   justify-content: center;
 }
 .gap-2 {
-	gap: 3rem;
+  gap: 3rem;
 }
 .text-center {
   text-align: center;
 }
 body {
   background-image: url(./images/bg-intro-mobile.png);
-  background-color: hsl(0, 100%, 74%);
+  background-color: var(--primary-red);
   font-family: "Poppins", sans-serif;
-	padding: 1.5rem;
-	margin: 0;
+  padding: 1.5rem;
+  margin: 0;
 }
 main {
-	margin-top: 3.33rem;
+  margin: 3.33rem 0 1.33rem;
 }
 .heading {
-	color: var(--white-text);
-	font-size: 1.67rem;
+  color: #fff;
+  font-size: 1.67rem;
 }
 .primary-text {
-	color: var(--white-text);
-	font-size: 1rem;
+  color: #fff;
+  font-size: 1rem;
 }
 .tos {
-	color: var(--neutral-purple);
-	font-size: 0.67rem;
+  color: var(--neutral-purple);
+  font-size: 0.67rem;
+  line-height: 200%;
+  margin: 0;
+}
+.red-bold {
+  color: var(--primary-red);
+  font-weight: 700;
 }
 .trial-box {
-	background-color: var(--accent-purple);
-	border-radius: 10px;
-	padding: 0.33rem 4rem;
-	margin: 0 0 1.33rem;
+  background-color: var(--accent-purple);
+  border-radius: 10px;
+  padding: 0.33rem 4rem;
+  margin: 0 0 1.33rem;
 }
 .form-field {
-	background-color: #fff;
-	border-radius: 10px;
-	padding: 1rem;
-	margin: 0 0 1.33rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
 }
-.box-shadow {
-	box-shadow: 0px 8px 0px hsla(0, 0%, 0%, 0.15);
+.form-field input {
+  border: 2px solid var(--shadow-gray);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+.form-field span {
+  color: var(--primary-red);
+  font-size: 0.67rem;
+  font-style: italic;
+  text-align: right;
+  margin: 0.25rem 0 0.75rem;
+}
+.form-field button {
+  background-color: var(--primary-green);
+  border: none;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  padding: 1.15rem 1rem 0.9rem;
+  margin: 0 auto 1rem;
+  width: 100%;
+}
+.box-shadow-gray {
+  box-shadow: 0px 0.5rem 0px var(--shadow-gray);
+}
+.box-shadow-green {
+  box-shadow: 0px 0.25rem 0px var(--shadow-green);
 }
 .attribution {
-  color: var(--white-text);
+  color: #fff;
   font-size: 0.67rem;
   text-align: center;
 }

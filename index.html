@@ -18,8 +18,8 @@
   </head>
 
   <body class="flex flex-col justify-center">
-    <main class="flex flex-col justify-center gap-2 text-center">
-      <header>
+    <main class="flex flex-switch justify-center gap-1 text-center">
+      <header class="header-wrapper">
         <h1 class="heading">Learn to code by watching others</h1>
         <p class="primary-text">
           See how experienced developers solve problems in real-time. Watching
@@ -28,7 +28,7 @@
         </p>
       </header>
 
-      <div>
+      <div class="signup-container">
         <div class="trial-box primary-text box-shadow-gray">
           <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
         </div>
@@ -47,6 +47,7 @@
             class="no-error"
             autocomplete="on"
           />
+          <!-- Alerts only show text via JavaScript if input is invalid -->
           <span id="fname-alert"></span>
           <input
             type="text"
@@ -71,6 +72,7 @@
             class="no-error"
           />
           <span id="password-alert"></span>
+          <!-- Submit button triggers JavaScript validate() function -->
           <button type="submit" class="primary-text box-shadow-green">
             Claim your free trial
           </button>

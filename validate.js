@@ -16,36 +16,41 @@ function validate() {
 
   // Test user input with regex and display alerts
   if (nameRegex.test(userFirst.value)) {
-    userFirst.classList.replace("error", "no-error")
+    // Change style of input boxes
+    userFirst.classList.replace("error", "no-error");
     document.getElementById("fname-alert").innerHTML = "";
   } else {
-    userFirst.classList.replace("no-error", "error")
+    userFirst.classList.replace("no-error", "error");
+    userFirst.placeholder = "";
     document.getElementById("fname-alert").innerHTML =
       "First Name cannot be empty";
-    console.log(userFirst);
   }
   if (nameRegex.test(userLast.value)) {
-    userLast.classList.replace("error", "no-error")
+    userLast.classList.replace("error", "no-error");
     document.getElementById("lname-alert").innerHTML = "";
   } else {
-    userLast.classList.replace("no-error", "error")
+    userLast.classList.replace("no-error", "error");
+    userLast.placeholder = "";
     document.getElementById("lname-alert").innerHTML =
       "Last Name cannot be empty";
   }
   if (emailRegex.test(userEmail.value)) {
-    userEmail.classList.replace("error", "no-error")
+    userEmail.classList.replace("error", "no-error");
     document.getElementById("email-alert").innerHTML = "";
   } else {
-    userEmail.classList.replace("no-error", "error")
+    userEmail.classList.replace("no-error", "error");
+    userEmail.value = "";
+    // Display sample email as placeholder
     userEmail.placeholder = "email@example.com";
     document.getElementById("email-alert").innerHTML =
       "Looks like this is not an email";
   }
   if (pwdRegex.test(userPwd.value)) {
-    userPwd.classList.replace("error", "no-error")
+    userPwd.classList.replace("error", "no-error");
     document.getElementById("password-alert").innerHTML = "";
   } else {
-    userPwd.classList.replace("no-error", "error")
+    userPwd.classList.replace("no-error", "error");
+    userPwd.placeholder = "";
     document.getElementById("password-alert").innerHTML =
       "Must have 8 characters and 1 symbol";
   }

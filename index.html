@@ -18,7 +18,7 @@
   </head>
 
   <body class="flex flex-col justify-center">
-    <main class="flex flex-col justify-center gap-2 text-center">
+    <main class="flex flex-col justify-center gap-3 text-center">
       <header>
         <h1 class="heading">Learn to code by watching others</h1>
         <p class="primary-text">
@@ -47,6 +47,7 @@
             class="no-error"
             autocomplete="on"
           />
+          <!-- Alerts only show text via JavaScript if input is invalid -->
           <span id="fname-alert"></span>
           <input
             type="text"
@@ -71,6 +72,7 @@
             class="no-error"
           />
           <span id="password-alert"></span>
+          <!-- Submit button triggers JavaScript validate() function -->
           <button type="submit" class="primary-text box-shadow-green">
             Claim your free trial
           </button>

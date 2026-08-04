@@ -6,40 +6,47 @@ function validate() {
   const nameRegex = /^[a-zA-Z-']+/;
   // A basic regex for email validation
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
-  // Password regex with 8-character and 1 symbol minimum 
-  const pwdRegex =
-    /^(?=\S*[#?!@$%^&*-])\S{8,}$/;
+  // Password regex with 8-character and 1 symbol minimum
+  const pwdRegex = /^(?=\S*[#?!@$%^&*-])\S{8,}$/;
   // Get user input from the form
-  const userFirst = document.forms["registerForm"]["fname"].value;
-  const userLast = document.forms["registerForm"]["lname"].value;
-  const userEmail = document.forms["registerForm"]["email"].value;
-  const userPwd = document.forms["registerForm"]["password"].value;
+  const userFirst = document.forms["registerForm"]["fname"];
+  const userLast = document.forms["registerForm"]["lname"];
+  const userEmail = document.forms["registerForm"]["email"];
+  const userPwd = document.forms["registerForm"]["password"];
 
-	// Test user input with regex and display alerts
-  if (nameRegex.test(userFirst)) {
+  // Test user input with regex and display alerts
+  if (nameRegex.test(userFirst.value)) {
+    userFirst.classList.replace("error", "no-error")
     document.getElementById("fname-alert").innerHTML = "";
   } else {
+    userFirst.classList.replace("no-error", "error")
     document.getElementById("fname-alert").innerHTML =
       "First Name cannot be empty";
+    console.log(userFirst);
   }
-  if (nameRegex.test(userLast)) {
+  if (nameRegex.test(userLast.value)) {
+    userLast.classList.replace("error", "no-error")
     document.getElementById("lname-alert").innerHTML = "";
   } else {
+    userLast.classList.replace("no-error", "error")
     document.getElementById("lname-alert").innerHTML =
       "Last Name cannot be empty";
   }
-  if (emailRegex.test(userEmail)) {
+  if (emailRegex.test(userEmail.value)) {
+    userEmail.classList.replace("error", "no-error")
     document.getElementById("email-alert").innerHTML = "";
   } else {
+    userEmail.classList.replace("no-error", "error")
+    userEmail.placeholder = "email@example.com";
     document.getElementById("email-alert").innerHTML =
       "Looks like this is not an email";
   }
-  if (pwdRegex.test(userPwd)) {
+  if (pwdRegex.test(userPwd.value)) {
+    userPwd.classList.replace("error", "no-error")
     document.getElementById("password-alert").innerHTML = "";
   } else {
+    userPwd.classList.replace("no-error", "error")
     document.getElementById("password-alert").innerHTML =
       "Must have 8 characters and 1 symbol";
   }
-
-  console.log(userFirst, userLast, userEmail, userPwd);
 }

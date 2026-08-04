@@ -65,13 +65,24 @@ main {
   border-radius: 10px;
   padding: 1.5rem;
 }
-.form-field input {
+.form-field input.no-error {
   border: 2px solid var(--shadow-gray);
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   padding: 1rem;
+}
+.form-field input.error {
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right 1.5rem bottom 50%;
+  border: 2px solid var(--primary-red);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 4.33rem 1rem 1rem;
 }
 .form-field span {
   color: var(--primary-red);
